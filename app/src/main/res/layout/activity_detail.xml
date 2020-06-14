@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pokename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:padding="16dp"
+            android:text="Bulbasaur"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/pokemonImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="16dp"
+            android:src="@mipmap/ic_launcher"
+            android:transitionName="transition" />
+
+        <ImageView
+            android:id="@+id/shareImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:onClick="shareWithOtherApps"
+            android:src="@drawable/share" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp"
+        android:paddingBottom="8dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="Type"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/Type"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/Type"
+                android:text="Normal"
+                android:textSize="20sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/Type"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/type1"
+                android:fontFamily="cursive"
+                android:text="Flying"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/regiontv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/type1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details"
+                android:fontFamily="cursive"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Region"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/regiontv"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/regiontv"
+                android:text="Kanto"
+                android:textSize="20sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/statstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/region"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Statistics"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statstv"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="HP-45"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Attack-49"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+
+            <TextView
+                android:id="@+id/defense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attack"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Defense-49"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/special_attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/defense"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Sp.Attack-65"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/special_defense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/special_attack"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Sp.Defense-65"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/special_defense"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Speed-45"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/preevolutiontv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speed"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Prev. Evolution"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/preevolution1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/preevolutiontv"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="-"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/preevolution2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/preevolution1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="-"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/postevolutiontv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/preevolution2"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Next. Evolution"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/postevolution1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postevolutiontv"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="-"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+            <TextView
+                android:id="@+id/postevolution2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postevolution1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="-"
+                android:textSize="16sp"
+                app:fontFamily="cursive" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
